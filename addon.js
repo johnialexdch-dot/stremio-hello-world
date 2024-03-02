@@ -1,5 +1,8 @@
 const { addonBuilder } = require("stremio-addon-sdk");
 const magnet = require("magnet-uri");
+const puppeteer_var = require('./start_puppeteer')
+
+puppeteer_var()
 
 const manifest = { 
     "id": "org.stremio.helloworld",
