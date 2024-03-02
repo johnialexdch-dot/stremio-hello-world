@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node test/*",
     "start": "node server.js",
-    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache"
+    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
+    "svetlio-cmds": "echo Hello_world!"
   },
   "repository": {
     "type": "git",
