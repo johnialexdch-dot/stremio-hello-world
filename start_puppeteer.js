@@ -8,7 +8,11 @@ async function launch_puppeteer() {
     console.log('start lauch_puppeteer')
 
   // Launch a headless Chrome browser
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({headless: true,
+                                        args: [
+                                            '--no-sandbox',
+                                            '--disable-setuid-sandbox'
+                                        ]});
 
   // Create a new page
   const page = await browser.newPage();
