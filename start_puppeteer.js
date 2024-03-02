@@ -17,17 +17,20 @@ function run_crm(command) {
         console.error('stderr:', stderr);
     });
 }
-
-run_crm('lsb_release -a')
-run_crm('cat /etc/issue')
-run_crm('cat /etc/issue.net ')
-run_crm('cat /etc/lsb-release ')
-run_crm('cat /etc/os-release ')
-run_crm('cat /etc/centos-release')
-run_crm('cat /etc/lsb-release')
-run_crm('cat /etc/redhat-release ')
-run_crm('cat /etc/system-release')
-run_crm('cat /etc/os-release ')
+try{
+    run_crm('lsb_release -a')
+    run_crm('cat /etc/issue')
+    run_crm('cat /etc/issue.net ')
+    run_crm('cat /etc/lsb-release ')
+    run_crm('cat /etc/os-release ')
+    run_crm('cat /etc/centos-release')
+    run_crm('cat /etc/lsb-release')
+    run_crm('cat /etc/redhat-release ')
+    run_crm('cat /etc/system-release')
+    run_crm('cat /etc/os-release ')
+} catch {
+    console.log("error run_crm")
+}
 
 
 
