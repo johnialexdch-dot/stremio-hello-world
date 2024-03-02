@@ -9,7 +9,7 @@
     "scripts": {
       "dokku": {
         "predeploy": "touch /app/predeploy.test",
-        "postdeploy": "printenv"
+        "postdeploy": [ "printenv", "heroku buildpacks"]
       }
     },
     "env": {
