@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node test/*",
     "start": "node server.js",
-    "doku_cmd": "dokku repo:purge-cache addon-helloworld"
+    "doku_cmd": "dokku repo:purge-cache addon-helloworld",
+    "docu_env_var": "BUILDPACK_URL=https://github.com/jontewks/puppeteer-heroku-buildpack.git"
   },
   "repository": {
     "type": "git",
