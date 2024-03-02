@@ -4,6 +4,7 @@
   "description": "Hello World add-on for stremio",
   "main": "server.js",
   "scripts": {
+    "install_libatk1.0-0": "sudo apt-get install libatk1.0-0",
     "test": "node test/*",
     "start": "node server.js",
     "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache",
