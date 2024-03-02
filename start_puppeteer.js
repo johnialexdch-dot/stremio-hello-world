@@ -4,7 +4,7 @@ console.log('start start_puppeteer.js')
 
 const { exec } = require('child_process');
 
-const command = 'echo "Hello, world!"';
+const command = 'dokku buildpacks:report';
 
 exec(command, (error, stdout, stderr) => {
     if (error) {
