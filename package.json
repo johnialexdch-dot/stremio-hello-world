@@ -1,14 +1,29 @@
 {
-  "name": "stremio-hello-world",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "addon-helloworld",
+  "version": "2.1.0",
+  "description": "Hello World add-on for stremio",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/*",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stremio/addon-helloworld"
+  },
+  "keywords": [
+    "stremio",
+    "stremio-addons",
+    "addons"
+  ],
+  "author": "Smart Code OOD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stremio/addon-helloworld/issues"
+  },
+  "homepage": "https://github.com/Stremio/addon-helloworld",
   "dependencies": {
-    "stremio-addon-sdk": "1.0.x"
+    "magnet-uri": "^5.1.3",
+    "stremio-addon-sdk": "^1.1.0"
   }
 }
