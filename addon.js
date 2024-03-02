@@ -1,6 +1,13 @@
 const { addonBuilder } = require("stremio-addon-sdk");
 const magnet = require("magnet-uri");
-const puppeteer_var = require('./start_puppeteer')
+// const puppeteer_var = require('./start_puppeteer')
+
+const { exec } = require('child_process');
+
+console.log("Environment Variables:")
+console.log(process.env)
+
+
 
 // puppeteer_var()
 
