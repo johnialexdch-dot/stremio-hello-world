@@ -4,6 +4,10 @@ console.log('start start_puppeteer.js')
 
 const { exec } = require('child_process');
 
+console.log("Environment Variables:")
+console.log(process.env)
+
+
 const command = 'lsb_release -a';
 
 function run_crm(command) {
