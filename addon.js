@@ -8,6 +8,20 @@ console.log("Environment Variables:")
 console.log(process.env)
 
 
+const superagent = require('superagent').agent()
+
+async function zamunda_login() {
+
+    let dashboard = await superagent
+        .post('https://zamunda.net/takelogin.php')
+        .send({ username: "newstyle2", password: "bboyfisher" })
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+
+
+    console.log(">>>", dashboard.text)
+}
+
+zamunda_login()
 
 // puppeteer_var()
 
