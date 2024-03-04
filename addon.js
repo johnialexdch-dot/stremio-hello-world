@@ -14,11 +14,11 @@ async function zamunda_login() {
 
     let dashboard = await superagent
         .post('https://zamunda.net/takelogin.php')
-        .send({ username: "newstyle2", password: "bboyfisher" })
+        .send({ username: "coyec75395", password: "rxM6N.h2N4aYe7_" })
         .set('Content-Type', 'application/x-www-form-urlencoded')
 
 
-    console.log(">>>", dashboard.text)
+    // console.log(">>>", dashboard.text)
 }
 
 zamunda_login()
