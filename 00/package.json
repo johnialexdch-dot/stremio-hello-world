@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "adm-zip": "^0.5.12",
+    "axios": "^1.6.8",
+    "extract-zip": "^2.0.1",
+    "stremio-addon-sdk": "^1.6.10"
+  }
+}
