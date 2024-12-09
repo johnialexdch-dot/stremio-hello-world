@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addon Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .lang-switcher {
+            margin-bottom: 20px;
+        }
+        .lang-switcher button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('bg')">Български</button>
+        </div>
+        <h1 data-en="Welcome to Zamunda.Net<br> Stremio-Addon" data-bg="Добре дошли в добавката <br> Zamunda.Net за Stremio"></h1>
+
+        <p data-en="The addon provides streaming from <a href='https://www.zamunda.net' target='_blank'>www.zamunda.net</a>"
+            data-bg="Добавката предоставя възможност за стрийминг от <a href='https://www.zamunda.net' target='_blank'>www.zamunda.net</a>">
+             The addon provides streaming from <a href="https://www.zamunda.net" target="_blank">www.zamunda.net</a>
+         </p>
+
+        <p data-en="To load bulgarian audio automatically, set <strong>Default Audio Track</strong> to <strong>Bulgarian Language</strong> from Stremio Settings." 
+            data-bg="За автоматично зареждане на българско аудио, задайте <strong>Български език</strong> за <strong>Аудио по подразбиране</strong> в настройките на Stremio.">
+        </p>
+
+        <p 
+            data-en="To load bulgarian subtitles automatically, set <strong>Default Subtitles Language</strong> to <strong>Bulgarian Language</strong> from Stremio Settings."
+            data-bg="За автоматично зареждане на български субтитри, задайте <strong>Български език</strong> за <strong>Език на субтитрите по подразбиране</strong> в настройките на Stremio.">
+        </p>
+
+        <h2 data-en="🐛 Bugs 💡 Feature Requests ❓ Questions" data-bg="🐛 Проблеми 💡 Идеи ❓ Въпроси"></h2>
+
+        <p 
+            data-en="If you found a bug, please report it <a href='https://github.com/svetlozardraganov/stremio-addon-zamunda/issues' target='_blank'>here</a>" 
+            data-bg="Ако намерите проблем, моля, докладвайте го <a href='https://github.com/svetlozardraganov/stremio-addon-zamunda/issues' target='_blank'>тук</a>">
+            If you found a bug, please report it 
+            <a href="https://github.com/svetlozardraganov/stremio-addon-zamunda/issues" target="_blank">here</a>
+        </p>
+
+        <p 
+            data-en="For feature requests or questions, please refer to this <a href='https://github.com/svetlozardraganov/stremio-addon-zamunda/discussions' target='_blank'>page</a>"
+            data-bg="За идеи или въпроси, моля, вижте тази <a href='https://github.com/svetlozardraganov/stremio-addon-zamunda/discussions' target='_blank'>страница</a>">
+            For feature requests or questions, please refer to this 
+            <a href="https://github.com/svetlozardraganov/stremio-addon-zamunda/discussions" target="_blank">page</a>
+        </p>
+
+        <h2 data-en="Donation 🌟 Support" data-bg="Дарения 🌟 Подкрепа"></h2>
+        <p data-en="The addon is free for everyone, but developing and maintaining it requires a significant amount of time and effort. Any support, in the form of a donation, would be greatly appreciated! 🙏❤️"
+           data-bg="Добавката е безплатна за всички, но създаването и поддръжката й изискват много време и усилия. Всяка подкрепа под формата на дарение ще бъде високо оценена! 🙏❤️">
+        </p>
+        <p>
+            <a href="https://revolut.me/svetlo5ioi" target="_blank" 
+               data-en="Donate via Revolut" 
+               data-bg="Дарете чрез Revolut">Donate via Revolut</a><br>
+
+            <a href="https://paypal.me/SvetlozarDraganov783" target="_blank" 
+               data-en="Donate via PayPal" 
+               data-bg="Дарете чрез PayPal">Donate via PayPal</a><br>
+
+            <a href="https://ko-fi.com/svetlozardraganov" target="_blank" 
+               data-en="Donate via Ko-Fi" 
+               data-bg="Дарете чрез Ko-Fi">Donate via Ko-Fi</a><br>
+
+               
+        </p>
+        <a class="button" href="stremio://c0a3c220c521-stremio-zamunda.baby-beamup.club/manifest.json" data-en="Install Zamunda Addon" data-bg="Инсталирайте Zamunda Addon"></a>
+    </div>
+
+    <script>
+        // function switchLanguage(lang) {
+        //     document.querySelectorAll('[data-en]').forEach(el => {
+        //         el.textContent = el.getAttribute(`data-${lang}`);
+        //     });
+        // }
+
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${lang}`);
+            });
+        }
+        // Default to Bulgarian
+        switchLanguage('bg');
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "org.stremio.subtitles_encoding_issue",
+  "version": "1.0.0",
+  "description": "Subtitles Encoding Issues",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "newstyle",
+  "license": "ISC",
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "adm-zip": "^0.5.12",
+    "axios": "^1.6.7",
+    "dom-parser": "^1.1.5",
+    "esm": "^3.2.25",
+    "file-saver": "^2.0.5",
+    "imdb": "^1.1.0",
+    "node-fetch": "^2.7.0",
+    "parse-torrent": "^11.0.16",
+    "puppeteer": "^22.2.0",
+    "should": "^13.2.3",
+    "stremio-addon-sdk": "1.0.x",
+    "superagent": "^8.1.2",
+    "superagent-charset": "^1.2.0",
+    "torrent-stream": "^1.2.1",
+    "unzipper": "^0.10.14",
+    "webtorrent": "^2.1.36",
+    "x-ray": "^2.3.4",
+    "xmldom": "^0.6.0",
+    "xpath": "^0.0.34",
+    "xpath-html": "^1.0.3"
+  }
+}

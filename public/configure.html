@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Configure Addon</title>
+</head>
+<body>
+  <h1>Configure Your Addon</h1>
+  <form id="configForm">
+    <label for="apiKey">API Key:</label>
+    <input type="text" id="apiKey" name="apiKey" required>
+    <br>
+    <button type="button" onclick="installAddon()">Install Addon</button>
+  </form>
+
+  <script>
+    function installAddon() {
+      // Get form data
+      const apiKey = document.getElementById('apiKey').value;
+
+      // Construct the new Addon Repository URL
+      const addonRepoUrl = `https://my.addon.com/${apiKey}/manifest.json`;
+
+      // Redirect to stremio:// protocol URL for addon installation
+      window.location.href = `stremio://${addonRepoUrl}`;
+    }
+  </script>
+</body>
+</html>

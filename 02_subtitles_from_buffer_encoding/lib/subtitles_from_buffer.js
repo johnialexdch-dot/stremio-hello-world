@@ -37,19 +37,33 @@ async function subtitles_start() {
                 console.log(subtitles_files_data)
 
                 // Upload subtitles to wwww.file.io (current implementation works for single subtitle file)
-                const upload_response = await upload_buffer_to_fileIO(subtitles_files_data)
+                // const upload_response = await upload_buffer_to_fileIO(subtitles_files_data)
                 // console.log("Subtitles uploaded to:", upload_response.link)
                 // console.log(upload_response.data)
+
+                 // Add file.io URLs to output
+                //  for (const item of upload_response) {
+                //     // console.log(item.data.link)
+                //     output.push({
+                //         // url: 'http://127.0.0.1:11470/subtitles.vtt?from=' + item.data.link,
+                //         url: item.data.link,
+                //         lang: 'bul'
+                //     })
+                // }
+
+                const upload_response = await upload_to_local_server(subtitles_files_data)
 
                 // Add file.io URLs to output
                 for (const item of upload_response) {
                     // console.log(item.data.link)
                     output.push({
                         // url: 'http://127.0.0.1:11470/subtitles.vtt?from=' + item.data.link,
-                        url: item.data.link,
+                        url: upload_response,
                         lang: 'bul'
                     })
                 }
+
+
 
 
             } else {
@@ -250,6 +264,34 @@ async function upload_buffer_to_fileIO(input) {
         return output
 
     }
+}
+
+async function upload_to_local_server(input) {
+
+    const http = require('http');
+    // const fs = require('fs');
+    // const path = require('path');
+
+
+    // console.log(input[0].data.toString('utf-8'))
+
+    const server = http.createServer((req, res) => {
+
+        const data = input[0].data.toString('utf-8')
+        res.writeHead(200, { 'Content-Type': 'text/plain;charset=UTF-8' });
+        res.end(data);
+
+
+    });
+
+    const PORT = 3000;
+  
+    server.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+
+    return `http://localhost:${PORT}`
+
 }
 
 module.exports = {
