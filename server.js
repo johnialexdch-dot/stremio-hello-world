@@ -14,7 +14,7 @@ const path = require("path");
 const addonInterface = require("./addon");
 
 const app = express();
-const PORT = 7001;
+const PORT = process.env.PORT || 7000;;
 
 // Serve the /configure page
 app.get("/configure", (req, res) => {
