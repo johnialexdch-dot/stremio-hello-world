@@ -11,6 +11,7 @@ const express = require("express");
 const { getRouter } = require("stremio-addon-sdk");
 const path = require("path");
 
+const { serveHTTP } = require("stremio-addon-sdk");
 const addonInterface = require("./01_login/addon");
 serveHTTP(addonInterface, { port: process.env.PORT || 7000 });
 
