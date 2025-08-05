@@ -11,16 +11,14 @@ const express = require("express");
 const { getRouter } = require("stremio-addon-sdk");
 const path = require("path");
 
-const { serveHTTP } = require("stremio-addon-sdk");
 const addonInterface = require("./01_login/addon");
-serveHTTP(addonInterface, { port: process.env.PORT || 7000 });
 
 const app = express();
-const PORT = process.env.PORT || 7000;;
+const PORT = process.env.PORT || 7000;
 
 // Serve the /configure page
 app.get("/configure", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html")); // Ensure the file exists in the "public" folder
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Use the Stremio Addon Router
@@ -31,4 +29,3 @@ app.use("/", addonRouter);
 app.listen(PORT, () => {
   console.log(`Addon running at http://127.0.0.1:${PORT}/manifest.json`);
 });
-
